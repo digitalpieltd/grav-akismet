@@ -1,0 +1,30 @@
+name: Akismet
+version: 0.1.0
+description: Adds Akismet spam detection to Grav forms.
+icon: plug
+author:
+  name: Digital Pie Ltd
+  email: adam@digitalpie.co.uk
+homepage: https://github.com/digitalpieltd/grav-akismet
+demo:
+keywords: form, akismet
+bugs: https://github.com/digitalpieltd/grav-akismet/issues
+docs: https://github.com/digitalpieltd/grav-akismet/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
